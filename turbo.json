@@ -11,9 +11,7 @@
       "persistent": true,
       "cache": false
     },
-    "start": {
-      "dependsOn": ["build"]
-    },
+    "start": {},
     "format": {
       "outputs": ["node_modules/.cache/.prettiercache"],
       "outputMode": "new-only"
