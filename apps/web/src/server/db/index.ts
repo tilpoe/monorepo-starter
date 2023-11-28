@@ -1,8 +1,9 @@
-import { env } from "@/env.mjs";
-import { logger } from "@/utils/logger";
 import type { Logger } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import mysql from "mysql2";
+
+import { env } from "@/env.js";
+import { logger } from "@/utils/logger";
 
 import * as schema from "./schema";
 

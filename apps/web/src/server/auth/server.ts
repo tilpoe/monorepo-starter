@@ -1,9 +1,4 @@
 import { redirect } from "next/navigation";
-import { env } from "@/env.mjs";
-import type { JwtUser, UserToAuthenticate } from "@/server/auth/shared";
-import { getJwtDataFromUser, jwtUserSchema } from "@/server/auth/shared";
-import { db } from "@/server/db";
-import { tUserAccounts } from "@/server/db/schema";
 import { DrizzleAdapter } from "@auth/drizzle-adapter";
 import * as bcrypt from "bcrypt";
 import { eq } from "drizzle-orm";
@@ -12,6 +7,12 @@ import type { DefaultSession, NextAuthOptions } from "next-auth";
 import { getServerSession } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { z } from "zod";
+
+import { env } from "@/env";
+import type { JwtUser, UserToAuthenticate } from "@/server/auth/shared";
+import { getJwtDataFromUser, jwtUserSchema } from "@/server/auth/shared";
+import { db } from "@/server/db";
+import { tUserAccounts } from "@/server/db/schema";
 
 declare module "next-auth" {
   interface Session extends DefaultSession {

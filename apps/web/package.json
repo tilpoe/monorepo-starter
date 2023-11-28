@@ -2,6 +2,7 @@
   "name": "@-package-/web",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "next build",
     "start": "next start",
@@ -9,7 +10,7 @@
     "clean": "git clean -xdf .next .turbo node_modules",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "format": "prettier --check \"**/*.{js,cjs,mjs,ts,tsx,md,json}\"",
+    "format": "prettier --check \"**/*.{js,cjs,ts,tsx,md,json}\"",
     "typecheck": "tsc --noEmit",
     "db:push": "dotenv drizzle-kit push:mysql",
     "db:studio": "dotenv drizzle-kit studio"
