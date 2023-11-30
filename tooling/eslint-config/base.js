@@ -30,6 +30,8 @@ const config = {
       "error",
       { checksVoidReturn: { attributes: false } },
     ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/require-await": "off",
     "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
     "@typescript-eslint/prefer-nullish-coalescing": "off",
     "no-irregular-whitespace": "off",
